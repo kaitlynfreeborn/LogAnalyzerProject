@@ -6,8 +6,22 @@
         xmlns:local="clr-namespace:LogAnalysis"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <ComboBox HorizontalAlignment="Left" Margin="190,139,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
+    <Grid Width="790">
+        <ComboBox HorizontalAlignment="Left" Margin="82,144,0,0" VerticalAlignment="Top" Width="364" SelectionChanged="ComboBox_SelectionChanged"/>
+        <Label x:Name="label_1" Content="Log Analyzer" HorizontalAlignment="Center" Margin="351,46,306,0" VerticalAlignment="Top" Height="39" Width="133" FontSize="20" FontFamily="Franklin Gothic Heavy" RenderTransformOrigin="0.514,0.474">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.44"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.504"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Select Event to Analyze" HorizontalAlignment="Left" Margin="82,113,0,0" VerticalAlignment="Top"/>
+        <Calendar HorizontalAlignment="Left" Margin="538,144,0,0" VerticalAlignment="Top"/>
+        <Label Content="Select Day to Analyze" HorizontalAlignment="Left" Margin="538,113,0,0" VerticalAlignment="Top" Width="179"/>
+        <Button Content="Analyze" HorizontalAlignment="Left" Margin="290,244,0,0" VerticalAlignment="Top" Width="132" Height="46" FontSize="18"/>
 
     </Grid>
 </Window>
