@@ -27,8 +27,7 @@ namespace LogAnalysis
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string info;
-            info = "hey";
+
         }
     }
 }
