@@ -29,18 +29,15 @@ namespace LogAnalysis
             string userName, password;
             userName = txtUsername.Text;
             password = txtPassword.Text;
-            //var form2 = new CustomerInfo();
+          
 
             if (userName == "admin" && password == "admin")
             {
                 MessageBox.Show("Welcome " + userName);
-                //ActiveForm.Hide();
-                //form2.Show();
                 this.Hide();
                 this.Close();
-                //th = new Thread(OpenNewForm);
-                //th.SetApartmentState(ApartmentState.STA);
-                //th.Start();
+                Data newWindow = new Data();
+                newWindow.Show();
             }
             else
             {
@@ -49,11 +46,7 @@ namespace LogAnalysis
 
         }
 
-        //private void OpenNewForm()
-        //{
-        //    Application.Run(new CustomerInfo());
-        //    //throw new NotImplementedException();
-        //}
+       
     }
     }
 

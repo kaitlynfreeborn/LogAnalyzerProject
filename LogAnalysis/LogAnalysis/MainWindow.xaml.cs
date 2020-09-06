@@ -41,7 +41,7 @@ namespace LogAnalysis
         private void Button_Click(object sender, RoutedEventArgs e)
         {
            login newWindow = new login();
-            newWindow.Show();
+           newWindow.Show();
         }
     }
 }
