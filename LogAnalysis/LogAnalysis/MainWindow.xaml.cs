@@ -24,12 +24,24 @@ namespace LogAnalysis
         public MainWindow()
         {
             InitializeComponent();
-            
+            this.Loaded += new RoutedEventHandler(MainWindow_Load);
+
+        }
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Welcome user!");
+
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           login newWindow = new login();
+            newWindow.Show();
         }
     }
 }
