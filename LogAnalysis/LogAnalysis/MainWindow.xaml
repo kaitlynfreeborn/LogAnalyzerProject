@@ -10,7 +10,13 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ComboBox x:Name="smb_select" HorizontalAlignment="Left" Margin="82,144,0,0" VerticalAlignment="Top" Width="364" SelectionChanged="ComboBox_SelectionChanged"/>
+        <ComboBox x:Name="smb_select" HorizontalAlignment="Left" Margin="82,144,0,0" VerticalAlignment="Top" Width="364" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="item 5" HorizontalAlignment="Left" Width="362"/>
+            <ComboBoxItem Content="item 4" HorizontalAlignment="Left" Width="362"/>
+            <ComboBoxItem Content="item 3" HorizontalAlignment="Left" Width="362"/>
+            <ComboBoxItem Content="item 2" HorizontalAlignment="Left" Width="362"/>
+            <ComboBoxItem Content="item 1" HorizontalAlignment="Left" Width="362"/>
+        </ComboBox>
         <Label x:Name="lbl_loganalyzer" Content="Log Analyzer" HorizontalAlignment="Center" Margin="330,39,327.4,0" VerticalAlignment="Top" Height="39" Width="133" FontSize="20" FontFamily="Franklin Gothic Heavy" RenderTransformOrigin="0.514,0.474">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -24,7 +30,6 @@
         <Label x:Name="lbl_select" Content="Select Event to Analyze" HorizontalAlignment="Left" Margin="82,113,0,0" VerticalAlignment="Top"/>
         <Calendar x:Name="cld_1" HorizontalAlignment="Left" Margin="539,144,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_date" Content="Select Day to Analyze" HorizontalAlignment="Left" Margin="539,113,0,0" VerticalAlignment="Top" Width="179"/>
-        <Button x:Name="btn_analyze" Content="Analyze" HorizontalAlignment="Left" Margin="290,244,0,0" VerticalAlignment="Top" Width="132" Height="46" FontSize="18" Click="Button_Click"/>
 
     </Grid>
 </Window>
