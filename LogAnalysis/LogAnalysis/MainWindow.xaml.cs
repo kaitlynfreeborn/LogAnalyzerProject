@@ -32,17 +32,17 @@ namespace LogAnalysis
             MessageBox.Show("Welcome user!");
 
         }
-      
 
-        //private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
-        //{
-
-        //}
 
         private void btnAnalyze_Click(object sender, RoutedEventArgs e)
         {
             login newWindow = new login();
             newWindow.Show();
+        }
+
+        private void cmbSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
