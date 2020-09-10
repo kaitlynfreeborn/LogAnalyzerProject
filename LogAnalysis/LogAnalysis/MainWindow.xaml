@@ -30,6 +30,7 @@
         <Label x:Name="lbl_select" Content="Select Event to Analyze" HorizontalAlignment="Left" Margin="82,113,0,0" VerticalAlignment="Top"/>
         <Calendar x:Name="cld_1" HorizontalAlignment="Left" Margin="539,144,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_date" Content="Select Day to Analyze" HorizontalAlignment="Left" Margin="539,113,0,0" VerticalAlignment="Top" Width="179"/>
+        <Button x:Name="btnAnalyze" Content="Analyze" HorizontalAlignment="Left" Margin="235,235,0,0" VerticalAlignment="Top" Width="211" Height="75" Click="btnAnalyze_Click"/>
 
     </Grid>
 </Window>
