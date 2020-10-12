@@ -20,17 +20,19 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="lbl_select" Content="Select Event to Analyze" HorizontalAlignment="Left" Margin="82,113,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_select" Content="Select file to Analyze:" HorizontalAlignment="Left" Margin="82,113,0,0" VerticalAlignment="Top"/>
         <Calendar x:Name="cld_1" HorizontalAlignment="Left" Margin="539,144,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_date" Content="Select Day to Analyze" HorizontalAlignment="Left" Margin="539,113,0,0" VerticalAlignment="Top" Width="179"/>
-        <Button x:Name="btnAnalyze" Content="Analyze" HorizontalAlignment="Left" Margin="235,235,0,0" VerticalAlignment="Top" Width="211" Height="75" Click="btnAnalyze_Click"/>
-        <ComboBox x:Name="cmbSelect" HorizontalAlignment="Left" Margin="82,144,0,0" VerticalAlignment="Top" Width="328" SelectionChanged="cmbSelect_SelectionChanged">
+        <Button x:Name="btnAnalyze" Content="Analyze" HorizontalAlignment="Left" Margin="145,308,0,0" VerticalAlignment="Top" Width="211" Height="75" Click="btnAnalyze_Click"/>
+        <ComboBox x:Name="cmbSelect" HorizontalAlignment="Left" Margin="82,388,0,0" VerticalAlignment="Top" Width="328" SelectionChanged="cmbSelect_SelectionChanged">
             <ComboBoxItem Content="Application"/>
             <ComboBoxItem Content="Setup"/>
             <ComboBoxItem Content="System"/>
             <ComboBoxItem Content="fowarded event"/>
             <ComboBoxItem Content="Security"/>
         </ComboBox>
+        <TextBox x:Name="txtFile" HorizontalAlignment="Left" Height="21" Margin="84,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="326"/>
+        <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="209,116,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="btnSelect_Click"/>
 
     </Grid>
 </Window>

@@ -44,5 +44,13 @@ namespace LogAnalysis
         {
 
         }
+
+        private void btnSelect_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            var result = dlg.ShowDialog();
+
+            txtFile.Text = dlg.FileName;
+        }
     }
 }
