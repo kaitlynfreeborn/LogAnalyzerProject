@@ -17,6 +17,8 @@ using System.IO;
 using System.Threading;
 using Microsoft.Win32;
 using System.Collections;
+using System.Data.OleDb;
+using System.Data;
 
 namespace LogAnalysis
 {
@@ -27,73 +29,56 @@ namespace LogAnalysis
     {
         public Data()
         {
-            InitializeComponent();
+            //InitializeComponent();
+            //string filePath = string.Empty;
+            //string fileExt = string.Empty;
+            //OpenFileDialog file = new OpenFileDialog(); //open dialog to choose file 
+            //if (file.ShowDialog() = System.Windows.Forms.DialogResult.OK) //if there is a file choosen by the user  
+            //{
+            //    filePath = file.FileName; //get the path of the file  
+            //    fileExt = System.IO.Path.GetExtension(filePath); //get the file extension  
+            //    if (fileExt.CompareTo(".xls") == 0 || fileExt.CompareTo(".xlsx") == 0)
+            //    {
+            //        try
+            //        {
+            //            DataTable dtExcel = new DataTable();
+            //            dtExcel = ReadExcel(filePath, fileExt); //read excel file  
+            //            dataGridView1.Visible = true;
+            //            dataGridView1.DataSource = dtExcel;
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            MessageBox.Show(ex.Message.ToString());
+            //        }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Please choose .xls or .xlsx file only.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error); //custom messageBox to show error  
+            //    }
 
-            try
-            {
-                string myLogName = "MyNewLog";
-                // Check if the source exists.
-                if (!EventLog.SourceExists("Security"))
-                {
-                    // Create the source.
-                    // An event log source should not be created and immediately used.
-                    // There is a latency time to enable the source, it should be created
-                    // prior to executing the application that uses the source.
-                    // Execute this sample a second time to use the new source.
-                    EventLog.CreateEventSource("Security", myLogName);
-                    Console.WriteLine("Creating EventSource");
-                    Console.WriteLine("Exiting, execute the application a second time to use the source.");
-                    // The source is created.  Exit the application to allow it to be registered.
-                    return;
-                }
-                else
-                {
-                    // Get the EventLog associated if the source exists.
-                    myLogName = EventLog.LogNameFromSourceName("Security", ".");
-                }
-
-                // Create an EventLog instance and assign its source.
-                EventLog myEventLog2 = new EventLog();
-                myEventLog2.Source = "Security";
-                // Write an informational entry to the event log.
-                myEventLog2.WriteEntry("Successfully created a new Entry in the Log");
-                myEventLog2.Close();
-                // Create a new EventLog object.
-                EventLog myEventLog1 = new EventLog();
-                myEventLog1.Log = myLogName;
-
-                // Obtain the Log Entries of "MyNewLog".
-                EventLogEntryCollection myEventLogEntryCollection =
-                   myEventLog1.Entries;
-                myEventLog1.Close();
-                Console.WriteLine("The number of entries in 'MyNewLog' = "
-                   + myEventLogEntryCollection.Count);
-
-                // Display the 'Message' property of EventLogEntry.
-                for (int i = 0; i < myEventLogEntryCollection.Count; i++)
-                {
-                    Console.WriteLine("The Message of the EventLog is :"
-                       + myEventLogEntryCollection[i].Message);
-                }
-
-                // Copy the EventLog entries to Array of type EventLogEntry.
-                EventLogEntry[] myEventLogEntryArray =
-                   new EventLogEntry[myEventLogEntryCollection.Count];
-                myEventLogEntryCollection.CopyTo(myEventLogEntryArray, 0);
-                IEnumerator myEnumerator = myEventLogEntryArray.GetEnumerator();
-                while (myEnumerator.MoveNext())
-                {
-                    EventLogEntry myEventLogEntry = (EventLogEntry)myEnumerator.Current;
-                    Console.WriteLine("The LocalTime the Event is generated is "
-                       + myEventLogEntry.TimeGenerated);
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Exception:{0}", e.Message);
-                
             }
         }
+
+        //public DataTable ReadExcel(string fileName, string fileExt)
+        //{
+        //    string conn = string.Empty;
+            
+        //    DataTable dtexcel = new DataTable();
+        //    if (fileExt.CompareTo(".xls") == 0)
+        //        conn = @"provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileName + ";Extended Properties='Excel 8.0;HRD=Yes;IMEX=1';"; //for below excel 2007  
+        //    else
+        //        conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fileName + ";Extended Properties='Excel 12.0;HDR=NO';"; //for above excel 2007  
+        //    using (OleDbConnection con = new OleDbConnection(conn))
+        //    {
+        //        try
+        //        {
+        //            OleDbDataAdapter oleAdpt = new OleDbDataAdapter("select * from [sheet1$]", con); //here we read data from sheet1  
+        //            oleAdpt.Fill(dtexcel); //fill excel data into dataTable  
+        //        }
+        //        catch { }
+        //    }
+        //    return dtexcel;
+        //}
     }
-}
+//}
 

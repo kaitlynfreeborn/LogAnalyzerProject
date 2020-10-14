@@ -28,7 +28,7 @@ namespace LogAnalysis
         {
             string userName, password;
             userName = txtUsername.Text;
-            password = txtPassword.Text;
+            password = Password.Password;
           
 
             if (userName == "admin" && password == "admin")
@@ -36,8 +36,7 @@ namespace LogAnalysis
                 MessageBox.Show("Welcome " + userName);
                 this.Hide();
                 this.Close();
-                Data newWindow = new Data();
-                newWindow.Show();
+                
             }
             else
             {
@@ -45,8 +44,6 @@ namespace LogAnalysis
             }
 
         }
-
-       
     }
-    }
+}
 
