@@ -58,6 +58,11 @@ namespace LogAnalysis
                 }
             }
         }
+
+        private void cmb1_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
 
