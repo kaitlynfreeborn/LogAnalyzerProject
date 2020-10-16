@@ -24,6 +24,7 @@ namespace LogAnalysis
             InitializeComponent();
         }
 
+        // compares username and password to allow user into program
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             string userName, password;

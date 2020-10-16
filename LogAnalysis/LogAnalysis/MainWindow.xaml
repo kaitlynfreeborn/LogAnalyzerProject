@@ -27,12 +27,12 @@
         <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="281,91,0,0" VerticalAlignment="Top" Width="129" FontWeight="Bold" Click="btnSelect_Click" FontSize="24" Height="36" Background="#FF85B687"/>
         <CheckBox x:Name="cmb1" Content="total # of errors" HorizontalAlignment="Left" Margin="29,239,0,0" VerticalAlignment="Top" Height="41" Width="207" FontSize="24" Checked="cmb1_Checked"/>
         <CheckBox x:Name="cmb_2" Content="errors from last hour" HorizontalAlignment="Left" Margin="29,287,0,0" VerticalAlignment="Top" Height="36" Width="241" FontSize="24"/>
-        <Button x:Name="btn_quick" Content="QUICK ANALYSIS" HorizontalAlignment="Left" Margin="480,335,0,0" VerticalAlignment="Top" Width="211" Height="75" Click="btnAnalyze_Click" Background="#FFE79D9D" FontSize="24" FontWeight="Bold"/>
         <ComboBox x:Name="cmb_sort" HorizontalAlignment="Left" Margin="406,211,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="Newest"/>
             <ComboBoxItem Content="Oldest"/>
         </ComboBox>
         <Label x:Name="lbl_sort" Content="Sort by:" HorizontalAlignment="Left" Margin="295,197,0,0" VerticalAlignment="Top" Width="179" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="btn_quick" Content="QUICK ANALYSIS" HorizontalAlignment="Left" Margin="538,335,0,0" VerticalAlignment="Top" Width="199" Height="75" Background="#FFE79D9D" FontWeight="Bold" FontSize="22" Click="btn_quick_Click"/>
 
     </Grid>
 </Window>

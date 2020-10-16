@@ -29,6 +29,9 @@ namespace LogAnalysis
     {
         public Data()
         {
+            // COMMENTED OUT SO THAT CODE WILL COMPILE, WORKING ON THIS SECTION
+
+
             //InitializeComponent();
             //string filePath = string.Empty;
             //string fileExt = string.Empty;
