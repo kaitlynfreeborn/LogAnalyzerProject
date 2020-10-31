@@ -23,7 +23,7 @@
         <Label x:Name="lbl_select" Content="Select file to Analyze:" HorizontalAlignment="Left" Margin="29,85,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
         <Label x:Name="lbl_count" Content="Count:" HorizontalAlignment="Left" Margin="29,192,0,0" VerticalAlignment="Top" Width="179" FontSize="24" FontWeight="Bold"/>
         <Button x:Name="btnAnalyze" Content="Analyze" HorizontalAlignment="Left" Margin="150,335,0,0" VerticalAlignment="Top" Width="211" Height="75" Click="btnAnalyze_Click" Background="#FF85B687" FontSize="24" FontWeight="Bold"/>
-        <TextBox x:Name="txtFile" HorizontalAlignment="Left" Height="41" Margin="29,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445" FontSize="24"/>
+        <TextBox x:Name="txtFile" HorizontalAlignment="Left" Height="41" Margin="29,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445" FontSize="18"/>
         <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="281,91,0,0" VerticalAlignment="Top" Width="129" FontWeight="Bold" Click="btnSelect_Click" FontSize="24" Height="36" Background="#FF85B687"/>
         <CheckBox x:Name="cmb1" Content="total # of errors" HorizontalAlignment="Left" Margin="29,239,0,0" VerticalAlignment="Top" Height="41" Width="207" FontSize="24" Checked="cmb1_Checked"/>
         <CheckBox x:Name="cmb_2" Content="errors from last hour" HorizontalAlignment="Left" Margin="29,287,0,0" VerticalAlignment="Top" Height="36" Width="241" FontSize="24"/>
