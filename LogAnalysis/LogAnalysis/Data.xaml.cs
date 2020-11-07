@@ -34,7 +34,7 @@ namespace LogAnalysis
     {
         public Data()
         {
-            string fname = MyVariables.txtFile;
+            string fname = MyVariables.filePath;
 
 
 

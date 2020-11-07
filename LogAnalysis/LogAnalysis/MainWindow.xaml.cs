@@ -30,7 +30,7 @@ namespace LogAnalysis
 
     static class MyVariables
     {
-        public static string txtFile;
+        public static string filePath;
     }
 
     public partial class MainWindow : Window
@@ -56,7 +56,9 @@ namespace LogAnalysis
             var fileName = dlg.ShowDialog();
 
             txtFile.Text = dlg.FileName;
-        }
+
+            MyVariables.filePath = txtFile.Text;
+         }
 
         //Working on this part, supposed to connect to database
         private void btnAnalyze_Click(object sender, RoutedEventArgs e)
