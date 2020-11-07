@@ -39,7 +39,7 @@ namespace LogAnalysis
 
 
           string fname = MyVariables.filePath;
-            string sheet = MyVariables.sheetName;
+          string sheet = MyVariables.sheetName;
 
 
         // COMMENTED OUT SO THAT CODE WILL COMPILE, WORKING ON THIS SECTION
