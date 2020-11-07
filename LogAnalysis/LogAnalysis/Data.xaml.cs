@@ -32,27 +32,31 @@ namespace LogAnalysis
     /// </summary>
     public partial class Data : Window
     {
+        
+
         public Data()
         {
-            string fname = MyVariables.filePath;
 
 
+          string fname = MyVariables.filePath;
+            string sheet = MyVariables.sheetName;
 
-            // COMMENTED OUT SO THAT CODE WILL COMPILE, WORKING ON THIS SECTION
 
-            String constr = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +
+        // COMMENTED OUT SO THAT CODE WILL COMPILE, WORKING ON THIS SECTION
+
+           string constr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +
                        fname +
                        ";Extended Properties='Excel 8.0;HDR=YES;';";
 
             OleDbConnection con = new OleDbConnection(constr);
-            OleDbCommand oconn = new OleDbCommand("select * from [Sheet1$]", con);
+            OleDbCommand oconn = new OleDbCommand($"select * from [{sheet}$]", con);
             con.Open();
 
             OleDbDataAdapter sda = new OleDbDataAdapter(oconn);
             DataTable data = new DataTable();
-            sda.Fill(data);
-            dataGridView1.DataSource = data;
 
+            sda.Fill(data);
+            dataGridView1.ItemsSource = sda.ToString();
 
 
 

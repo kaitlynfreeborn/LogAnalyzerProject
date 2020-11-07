@@ -33,6 +33,8 @@
         </ComboBox>
         <Label x:Name="lbl_sort" Content="Sort by:" HorizontalAlignment="Left" Margin="295,197,0,0" VerticalAlignment="Top" Width="179" FontSize="24" FontWeight="Bold"/>
         <Button x:Name="btn_quick" Content="QUICK ANALYSIS" HorizontalAlignment="Left" Margin="538,335,0,0" VerticalAlignment="Top" Width="199" Height="75" Background="#FFE79D9D" FontWeight="Bold" FontSize="22" Click="btn_quick_Click"/>
+        <TextBox x:Name="txtSheet" HorizontalAlignment="Left" Height="39" Margin="557,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" FontSize="24"/>
+        <Label x:Name="Sheet_Name_" Content="Sheet Name:" HorizontalAlignment="Left" Margin="557,88,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Width="181"/>
 
     </Grid>
 </Window>

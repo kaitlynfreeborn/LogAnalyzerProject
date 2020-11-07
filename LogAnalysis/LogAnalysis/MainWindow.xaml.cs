@@ -31,6 +31,7 @@ namespace LogAnalysis
     static class MyVariables
     {
         public static string filePath;
+        public static string sheetName;
     }
 
     public partial class MainWindow : Window
@@ -58,6 +59,7 @@ namespace LogAnalysis
             txtFile.Text = dlg.FileName;
 
             MyVariables.filePath = txtFile.Text;
+            MyVariables.sheetName = txtSheet.Text;
          }
 
         //Working on this part, supposed to connect to database
