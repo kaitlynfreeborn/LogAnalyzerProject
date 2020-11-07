@@ -5,6 +5,7 @@ using System.Data.OleDb;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -16,14 +17,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Excel = Microsoft.Office.Interop.Excel;
+using Window = System.Windows.Window;
+
 
 namespace LogAnalysis
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
+    static class MyVariables
+    {
+        public static string filePath;
+    }
+
     public partial class MainWindow : Window
-    { 
+    {
+       
         public MainWindow()
         {
             InitializeComponent();
@@ -32,7 +44,7 @@ namespace LogAnalysis
 
         //Opens login window upon start of program
         private void login_Load(object sender, EventArgs e)
-        {   
+        {
             login newWindow = new login();
             newWindow.Show();
         }
@@ -44,7 +56,9 @@ namespace LogAnalysis
             var fileName = dlg.ShowDialog();
 
             txtFile.Text = dlg.FileName;
-        }
+
+            MyVariables.filePath = txtFile.Text;
+         }
 
         //Working on this part, supposed to connect to database
         private void btnAnalyze_Click(object sender, RoutedEventArgs e)
@@ -52,23 +66,65 @@ namespace LogAnalysis
             Data newWindow = new Data();
             newWindow.Show();
 
-            string con = $@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={txtFile.Text};" + @"Extended Properties='Excel 8.0;HDR=Yes;'";
-            using (OleDbConnection connection = new OleDbConnection(con))
-            {
-                connection.Open();
-                OleDbCommand command = new OleDbCommand("select * from [test$] ", connection);
-                using (OleDbDataReader dr = command.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        var row1Col0 = dr[0];
-                        Console.WriteLine(row1Col0);
-                    }
-                }
-            }
-        }
 
-        private void cmb1_Checked(object sender, RoutedEventArgs e)
+
+            //Excel.Application xlApp;
+            //Excel.Workbook xlWorkBook;
+            //Excel.Worksheet xlWorkSheet;
+            //Excel.Range range;
+
+            //string str;
+            //int rCnt;
+            //int cCnt;
+            //int rw = 0;
+            //int cl = 0;
+
+            //xlApp = new Excel.Application();
+            //xlWorkBook = xlApp.Workbooks.Open($@"{txtFile.Text}", 0, true, 5, "", "", true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
+            //xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+            //range = xlWorkSheet.UsedRange;
+            //rw = range.Rows.Count;
+            //cl = range.Columns.Count;
+
+
+            //for (rCnt = 1; rCnt <= rw; rCnt++)
+            //{
+            //    for (cCnt = 1; cCnt <= cl; cCnt++)
+            //    {
+            //        str =range.Cells.ToString();
+                    
+            //        //str = (string)(range.Cells[rCnt, cCnt] as Excel.Range).Value2;
+            //        MessageBox.Show(str);
+            //    }
+            //}
+
+            //xlWorkBook.Close(true, null, null);
+            //xlApp.Quit();
+
+            //Marshal.ReleaseComObject(xlWorkSheet);
+            //Marshal.ReleaseComObject(xlWorkBook);
+            //Marshal.ReleaseComObject(xlApp);
+
+
+
+            //string con = $@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={txtFile.Text};" + @"Extended Properties=\'Excel 8.0;HDR=Yes;\'";
+            //using (OleDbConnection connection = new OleDbConnection(con))
+            //{
+            //    connection.Open();
+            //    OleDbCommand command = new OleDbCommand("select * from [test$] ", connection);
+            //    using (OleDbDataReader dr = command.ExecuteReader())
+            //    {
+            //        while (dr.Read())
+            //        {
+            //            var row1Col0 = dr[0];
+            //            Console.WriteLine(row1Col0);
+            //        }
+            //    }
+            //}
+
+        }
+            private void cmb1_Checked(object sender, RoutedEventArgs e)
         {
 
         }
